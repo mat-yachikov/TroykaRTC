@@ -53,11 +53,11 @@ public:
     uint8_t getMonth() const { return _month; }
     uint16_t getYear() const { return _year; }
     uint32_t getUnixTime();
+    uint32_t dateToDays(uint32_t year, uint8_t month, uint8_t day);
+    uint32_t daysToSeconds(uint32_t days, uint8_t h, uint8_t m, uint8_t s);
 
 private:
 	void parsingTime();
-	uint32_t dateToDays(uint32_t year, uint8_t month, uint8_t day);
-    uint32_t daysToSeconds(uint32_t days, uint8_t h, uint8_t m, uint8_t s);
     uint8_t DecToBcd(uint8_t val);
     uint8_t BcdToDec(uint8_t val);
     int8_t _second;
